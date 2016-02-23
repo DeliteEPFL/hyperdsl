@@ -9,4 +9,4 @@
 	url = https://github.com/DeliteEPFL/Forge.git
 [submodule "scala-records"]
 	path = scala-records
-	url = ../scala-records.git
+	url = https://github.com/DeliteEPFL/scala-records.git

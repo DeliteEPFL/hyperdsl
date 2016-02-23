@@ -50,7 +50,7 @@ object HyperDSLBuild extends Build with ForgePreprocessor {
   // build targets
   //root directory makes this the default project
   lazy val hyperdsl = Project("hyperdsl", file("."),
-    settings = deliteBuildSettings) aggregate(lms, framework, runtime, deliteTest, forge)
+    settings = deliteBuildSettings) aggregate(lms, framework, runtime, deliteTest, forge, scalaRecords)
 
   lazy val lms = Project("lms", file("virtualization-lms-core")) // additional settings are picked up in build.sbt of submodule
 
@@ -66,6 +66,8 @@ object HyperDSLBuild extends Build with ForgePreprocessor {
   lazy val runtime = Project("runtime", file("delite/runtime"), settings = deliteBuildSettings)
 
   lazy val forge = Project("forge", file("forge"), settings = forgeBuildSettings) dependsOn(lms) // additional settings are picked up in build.sbt of submodule
+
+  lazy val scalaRecords = Project("scala-records", file("scala-records")) // settings are in scala-records project Build.scala
 
   // include all projects that should be built and tested in 'aggregate'
   lazy val tests = Project("tests", file("project/boot"), settings = deliteBuildSettings) aggregate(runtime, framework, deliteTest, dsls, apps)

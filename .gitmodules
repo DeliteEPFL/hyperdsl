@@ -7,3 +7,6 @@
 [submodule "forge"]
 	path = forge
 	url = https://github.com/DeliteEPFL/Forge.git
+[submodule "scala-records"]
+	path = scala-records
+	url = ../scala-records.git

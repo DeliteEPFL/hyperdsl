@@ -10,3 +10,6 @@
 [submodule "scala-records"]
 	path = scala-records
 	url = https://github.com/DeliteEPFL/scala-records.git
+[submodule "scala-yinyang"]
+	path = scala-yinyang
+	url = https://github.com/DeliteEPFL/scala-yinyang.git
